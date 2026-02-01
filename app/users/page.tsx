@@ -2,7 +2,7 @@ import dynamic from 'next/dynamic';
 import React from 'react'
 
 export default async function userPage() {
-    const res = await fetch('practice-exlevkb8p-mrsurus-projects.vercel.app/api/items');
+    const res = await fetch('https://practice-app-lovat.vercel.app/api/items');
     const {data} = await res.json();
   return (
     <div className='grid grid-cols-3'>

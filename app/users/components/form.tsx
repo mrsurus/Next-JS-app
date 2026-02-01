@@ -25,7 +25,7 @@ export default function SimpleForm({ onSubmit }: Props) {
       if (onSubmit) {
         await onSubmit(payload)
       } else {
-        const res = await fetch('http://localhost:3000/api/items', {
+        const res = await fetch('https://practice-app-lovat.vercel.app/api/items', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload),
