@@ -6,6 +6,8 @@ type Props = {
   onSubmit?: (data: { name: string; email: string; isSeller: string }) => Promise<void> | void
 }
 
+export const dynamic = "force-dynamic";
+
 export default function SimpleForm({ onSubmit }: Props) {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
@@ -15,6 +17,8 @@ export default function SimpleForm({ onSubmit }: Props) {
 
   // derive the isSeller string from the boolean flag without causing re-renders
   const isSeller = sellerInfo ? 'seller' : 'buyer'
+
+
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
