@@ -1,9 +1,10 @@
 import React from 'react'
 
-export const dynamic = "force-dynamic";
 
 export default async function userPage() {
-    const res = await fetch('https://practice-app-lovat.vercel.app/api/items');
+    const res = await fetch('https://practice-app-lovat.vercel.app/api/items', {
+        cache: 'force-cache'
+    });
     const {data} = await res.json();
   return (
     <div className='grid grid-cols-3'>
